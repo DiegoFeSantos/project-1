@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../estilos/style.css">
+</head>
+<body>
+  
+     <header>
+        <div id="logo">
+            <img id="logopng" src="../imagens/LOGO-PNG-Branco-1024x508.png" alt="Logo">
+        </div>
+        <div class="hamburger" id="hamburger">
+            &#9776;
+        </div>
+        <div class="menu">
+            <nav class="nav" id="nav">
+                <ul>
+                    <li>
+                        <a href="#vendas" class="submenu-toggle">Vendas</a>
+                        <ul class="submenu">
+                            <li><a href="#empresa">Empresa</a></li>
+                            <li><a href="#infraestrutura">Infraestrutura</a></li>
+                            <li><a href="#aeronaves">Aeronaves</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#servicos" class="submenu-toggle">Serviços</a>
+                        <ul class="submenu">
+                            <li><a href="#taxiaereo">Táxi Aéreo</a></li>
+                            <li><a href="#cargas">Cargas</a></li>
+                            <li><a href="#hangaragem">Hangaragem</a></li>
+                            <li><a href="#autoatendimento">Auto Atendimento</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#voos">Voos Profissionais</a></li>
+                    <li><a href="#contatos">Contatos</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+
+
+    </footer>
+</body>
+<script>
+ document.addEventListener("DOMContentLoaded", function() {
+        const hamburger = document.querySelector('.hamburger');
+        const menu = document.querySelector('.menu');
+
+        hamburger.addEventListener('click', function() {
+            menu.classList.toggle('active'); // Alterna a classe 'active' no menu
+        });
+    });
+</script>
+</html>

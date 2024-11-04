@@ -1,0 +1,137 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Controle melhor do layout */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: blue; /* Cor de fundo azul */
+    padding: 10px; /* Espaçamento interno */
+    display: flex;
+    align-items: center; /* Alinha verticalmente ao centro */
+    justify-content: space-between; /* Espaço entre logo e menu */
+    position: relative; /* Para permitir que os elementos filhos se sobreponham */
+    z-index: 100; /* Define um z-index base para o header */
+}
+
+#logo {
+    display: flex; /* Flex para centralizar conteúdo dentro da div */
+    align-items: center; /* Alinha verticalmente ao centro */
+}
+
+#logopng {
+    max-width: 100px; /* Limita a largura máxima */
+    max-height: 100px; /* Limita a altura máxima */
+    width: auto; /* Mantém a proporção responsiva */
+    height: auto; /* Mantém a proporção responsiva */
+}
+
+.hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 15px;
+    color: white; /* Cor das letras do botão de hambúrguer */
+    display: none; /* Inicialmente escondido */
+}
+
+.menu {
+    flex-grow: 1; /* Permite que o menu ocupe o espaço restante */
+    display: flex;
+    justify-content: center; /* Centraliza o menu */
+}
+
+.nav {
+    display: flex; /* Exibe o menu como um flex container */
+    background: blue; /* Cor de fundo do menu, igual à header */
+    position: relative; /* Ajusta a posição */
+    z-index: 1000; /* Garante que o menu fique acima de outros elementos */
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Exibe os itens do menu em linha */
+}
+
+.nav li {
+    position: relative; /* Permite posicionar submenus corretamente */
+}
+
+.nav a {
+    color: white; /* Cor do texto do menu */
+    text-decoration: none;
+    display: block;
+    padding: 20px; /* Aumente o padding para dar mais espaço interno */
+    min-height: 60px; /* Define uma altura mínima para os itens do menu */
+    font-size: 16px; /* Aumenta o tamanho da fonte */
+}
+
+.nav a:hover {
+    background: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilo do submenu */
+.submenu {
+    display: none; /* Esconde o submenu inicialmente */
+    background: blue; /* Cor de fundo do submenu, igual à header */
+    margin: 0; /* Remove margem */
+    position: absolute; /* Permite que o submenu fique sobre os itens */
+    left: 0; /* Alinha o submenu à esquerda do item pai */
+    width: 100%; /* Faz o submenu ter a mesma largura que o item pai */
+    z-index: 999; /* Garante que o submenu fique acima de outros elementos */
+    padding: 10px 0; /* Adiciona espaço acima e abaixo dos itens do submenu */
+}
+
+/* Estilo dos itens do submenu */
+.submenu li {
+    border-bottom: 1px solid #ccc; /* Borda para separar os itens do submenu */
+}
+
+.submenu a {
+    color: white; /* Cor do texto no submenu */
+    padding: 15px; /* Aumenta o padding para dar mais espaço interno */
+    font-size: 14px; /* Ajusta o tamanho da fonte do submenu */
+}
+
+/* Exibir submenu ao passar o mouse */
+.nav li:hover .submenu {
+    display: block; /* Exibe o submenu ao passar o mouse */
+}
+
+/* Estilos para telas menores */
+@media (max-width: 768px) {
+    .nav {
+        display: none; /* Esconde o menu padrão */
+    }
+
+    .hamburger {
+        display: block; /* Mostra o botão de hambúrguer */
+    }
+
+    .menu.active .nav {
+        display: flex; /* Exibe o menu quando ativo */
+        flex-direction: column; /* Alinha os itens em coluna (vertical) */
+        position: absolute; /* Permite que o menu se sobreponha à header */
+        top: 50px; /* Alinha o menu logo abaixo da header */
+        left: 0; /* Alinha o menu à esquerda */
+        width: 100%; /* Faz o menu ocupar toda a largura */
+        z-index: 1000; /* Garante que o menu fique acima de outros elementos */
+    }
+
+    .submenu {
+        position: relative; /* Permite que o submenu seja exibido corretamente */
+        width: auto; /* Ajusta a largura do submenu */
+    }
+}
+
+/* Quando o menu estiver ativo, mostre o menu */
+.menu.active {
+    display: flex; /* Exibe o menu quando ativo */
+}
