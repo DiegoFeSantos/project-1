@@ -1,5 +1,6 @@
 #part1 {
     display: flex;
+    flex-direction: row; /* Alinhamento padrão lado a lado */
     justify-content: space-evenly;
     align-items: flex-start;
     flex-wrap: wrap; /* Permite quebra de linha */
@@ -11,23 +12,100 @@
 }
 
 #cotaçao {
-    background-color:rgb(57, 118, 250); /* Cor original */
+    background-color: rgb(57, 118, 250); /* Cor original */
     height: 500px;
     width: 600px;
     animation: slideInLeft 1s forwards;
     opacity: 0;
     margin-bottom: 20px; /* Adiciona espaço entre as divs em telas pequenas */
     padding: 20px; /* Adiciona espaçamento interno */
+    border-radius: 30px;
 }
 
 #foto {
-   background-image: url(../imagens/King-Air-B200-Sales-Servicos-Aereos.png);
-   background-size: 600px;
+    background-image: url(../imagens/King-Air-B200-Sales-Servicos-Aereos.png);
+    background-size: 600px;
+    background-position: center center;
     height: 500px;
     width: 600px;
     animation: slideInRight 1s forwards;
     opacity: 0;
     margin-bottom: 20px; /* Adiciona espaço entre as divs em telas pequenas */
+    min-height: 500px; /* Garante que a div não desapareça */
+    border-radius: 30px;
+    
+}
+#part2{
+    margin: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+#fotor{
+    margin-top: 40px;
+    background-image: url(../imagens/King-Air-B200-ATC-Fretamento-de-aeronaves-1.jpg);
+    height: 450px;
+    width: 450px;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 100%;
+
+}
+#transp{
+    height: 450px;
+    width: 600px;
+}
+#fotoe{
+    margin-top: 40px;
+     background-image: url(../imagens/Grand-Caravan-Sales-Servicos-Aereos-1024x576.png);
+    height: 450px;
+    width: 450px;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 100%;
+
+}
+#taxia{
+    margin-top: 40px;
+    height: 550px;
+    width: 550px;
+    }
+#saibamais{
+    color: white;
+    background-color: blue;
+    text-align: center;
+    padding: 10px;
+    margin-left: 150px;
+    border-radius: 30px;
+    text-decoration: none;
+}
+#saibamais:hover{
+    background-color: rgb(58, 58, 247);
+}
+
+#part3{
+    margin: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+#part4{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(57, 118, 250);
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    padding: 50px;
+    
+}
+
+#h1p4{ 
+    width: 100%;
+    color: white;
+    background-color: rgb(57, 118, 250);
+    margin: 0px;
+    text-align: center;
+
+
 }
 
 /* Animações de entrada */
@@ -62,8 +140,18 @@
     #cotaçao, #foto {
         width: 90%; /* Adapta a largura para telas menores */
         height: auto; /* Permite que a altura aumente para acomodar o conteúdo */
+        opacity: 1; /* Garante que ambas as divs fiquem visíveis */
     }
-    form .row > div {
-        width: 100%; /* Formulário fica em uma coluna */
+    #foto {
+       display: none;
     }
+    #part2 {
+        flex-direction: column; /* Divs ficam empilhadas */
+        align-items: center; /* Centraliza as divs */
+    }
+    #par3 {
+        flex-direction: column; /* Divs ficam empilhadas */
+        align-items: center; /* Centraliza as divs */
+    }
+
 }

@@ -16,6 +16,7 @@
     display: flex;
     justify-content: space-between;
     padding: 30px 20px 30px 20px;
+    padding-right: 100px;
 }
 
 #logopng {
