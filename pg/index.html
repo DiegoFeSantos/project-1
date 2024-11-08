@@ -5,66 +5,148 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../estilos/style.css">
+    <link rel="stylesheet" href="../estilos/header-footer.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../estilos/main.css">
+  </head>
 </head>
 
 <body>
 
-    <header class="lula">
+    <header class="lula fixed-top" >
+       <div id="img">
         <img id="logopng" src="../imagens/LOGO-PNG-Branco-1024x508.png" alt="Logo">
-        <nav id="bg" class="navbar navbar-expand-lg navbar-light ">
-           
-            <a class="navbar-brand" href="#"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        A sales
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="#">A empresa</a>
-                      <a class="dropdown-item" href="#">infraestrutura</a>
-                      <a class="dropdown-item" href="#">arenonaves</a>
-                    </div>
-                  </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                   serviços
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Taxi aereo</a>
-                    <a class="dropdown-item" href="#">cargas</a>
-                    <a class="dropdown-item" href="#">hangaragem</a>
-                    <a class="dropdown-item" href="#">Atendimento</a>
-                  </div>
+       </div> 
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="#"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                A sales
+              </a>
+              <div id="submenu" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item submenu-i" href="#">A empresa</a>
+                <a class="dropdown-item submenu-i" href="#">infraestrutura</a>
+                <a class="dropdown-item submenu-i" href="#">arenonaves</a>
+              </div>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  serviços
+                </a>
+                <div id="submenu" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item submenu-i" href="#">Taxi aereo</a>
+                  <a class="dropdown-item submenu-i" href="#">cargas</a>
+                  <a class="dropdown-item submenu-i" href="#">hangaragem</a>
+                  <a class="dropdown-item submenu-i" href="#">Atendimento</a>
+                </div>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Voos Profissionais</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Voos Profissionais</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Contatos</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Blog</a>
-                  </li>
-              </ul>
-            </div>
-          </nav>     
+                  <a class="nav-link" href="#">Contatos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Blog</a>
+                </li>
+            
+            </ul>
+          </div>
+
     </header>
     <main>
 
+      <div id="part1">
+        <div id="cotaçao">
+<h3>
+  Cotaçao
+</h3>
+<form class="container p-3">
+  <div class="row">
+      <!-- Primeira coluna com 4 opções -->
+      <div class="col-md-6 mb-3">
+          <label for="option1" class="form-label">Nome</label>
+          <input type="text" id="option1" class="form-control" placeholder="Digite seu nome">
+      </div>
+      <div class="col-md-6 mb-3">
+          <label for="option2" class="form-label">E-mail</label>
+          <input type="text" id="option2" class="form-control" placeholder="Digite seu E-mail">
+      </div>
+      <div class="col-md-6 mb-3">
+          <label for="option3" class="form-label">Telefone</label>
+          <input type="search" id="option3" class="form-control" placeholder="Digite seu numero de telefone">
+      </div>
+      <div class="col-md-6 mb-3">
+          <label for="option4" class="form-label">Data</label>
+          <input type="date" id="option4" class="form-control">
+      </div>
+
+      <!-- Segunda coluna com mais 4 opções -->
+      <div class="col-md-6 mb-3">
+          <label for="option5" class="form-label">Origem</label>
+          <input type="search" id="option5" class="form-control" placeholder="Digite seu local de partida">
+      </div>
+      <div class="col-md-6 mb-3">
+          <label for="option6" class="form-label">destino</label>
+          <input type="search" id="option6" class="form-control"
+          placeholder="Digite seu destino">
+      </div>
+      <div class="col-md-6 mb-3">
+          <label for="option7" class="form-label">Arenonaves</label>
+          <input type="text" id="option7" class="form-control" placeholder="Digite Aeronave de preferencia">
+      </div>
+      <div class="col-md-6 mb-3">
+          <label for="option8" class="form-label">Passageiros</label>
+          <input type="text" id="option8" class="form-control" placeholder="Digite a quantidade de passageiros">
+      </div>
+  </div>
+</form>
+
+
+        </div>
+        <div id="foto">
+          <img src="" alt="" srcset="">
+          
+        </div>
+      </div>
+
     </main>
-    <footer>
 
+    <footer id="footer" class="row row-cols-1 row-cols-sm-2 row-cols-md-5  border-top ">
+    
+      <div class="col mb-3">
+        <h5 class="h5">Contação para voos</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">(11) 98556-7828 | Lucas</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">(11) 98556-6558 | Roberta</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">comercial@aerosales.com.br</a></li>
+        </ul>
+      </div>
+  
+      <div class="col mb-3">
+        <h5 class="h5">Contatos</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">(11) 2392-0200 ou (11) 3993-3000</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">(11) 98556-7845 | Hangaragem</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Av. Olavo Fontoura, 1078 - Setor E, Lote 10</a></li>
 
+        </ul>
+      </div>
+  
+    
+      <div id="direitos">
+        Sales Serviços Aéreos © 2024 – Todos os direitos reservados
+      </div>
     </footer>
+   
+
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </html>

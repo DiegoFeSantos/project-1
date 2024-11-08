@@ -1,0 +1,68 @@
+#part1 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Permite quebra de linha */
+    height: auto; /* Ajusta a altura dinamicamente */
+    overflow: hidden;
+    margin-top: 140px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+#cotaçao {
+    background-color: red; /* Cor original */
+    height: 500px;
+    width: 600px;
+    animation: slideInLeft 1s forwards;
+    opacity: 0;
+    margin-bottom: 20px; /* Adiciona espaço entre as divs em telas pequenas */
+    padding: 20px; /* Adiciona espaçamento interno */
+}
+
+#foto {
+    background-color: blue; /* Cor original */
+    height: 500px;
+    width: 600px;
+    animation: slideInRight 1s forwards;
+    opacity: 0;
+    margin-bottom: 20px; /* Adiciona espaço entre as divs em telas pequenas */
+}
+
+/* Animações de entrada */
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100vw);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100vw);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Layout responsivo para telas menores */
+@media (max-width: 768px) {
+    #part1 {
+        flex-direction: column; /* Divs ficam empilhadas */
+        align-items: center; /* Centraliza as divs */
+    }
+    #cotaçao, #foto {
+        width: 90%; /* Adapta a largura para telas menores */
+        height: auto; /* Permite que a altura aumente para acomodar o conteúdo */
+    }
+    form .row > div {
+        width: 100%; /* Formulário fica em uma coluna */
+    }
+}
