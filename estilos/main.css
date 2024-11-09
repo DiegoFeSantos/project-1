@@ -39,6 +39,7 @@
     margin: 10px;
     display: flex;
     justify-content: space-evenly;
+    
 }
 #fotor{
     margin-top: 40px;
@@ -55,7 +56,7 @@
     width: 600px;
 }
 #fotoe{
-    margin-top: 40px;
+    
      background-image: url(../imagens/Grand-Caravan-Sales-Servicos-Aereos-1024x576.png);
     height: 450px;
     width: 450px;
@@ -65,37 +66,28 @@
 
 }
 #taxia{
-    margin-top: 40px;
-    height: 550px;
+    margin-bottom: 40px;
+    height: auto;
     width: 550px;
+    align-items: center;
     }
-#saibamais{
-    color: white;
-    background-color: blue;
-    text-align: center;
-    padding: 10px;
-    margin-left: 150px;
-    border-radius: 30px;
-    text-decoration: none;
-}
-#saibamais:hover{
-    background-color: rgb(58, 58, 247);
-}
 
 #part3{
-    margin: 10px;
     display: flex;
     justify-content: space-evenly;
+
 }
 #part4{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     background-color: rgb(57, 118, 250);
-    width: 100%;
     text-align: center;
     align-items: center;
     padding: 50px;
-    
+    width: 100%; /* Garante que a div ocupe toda a largura da tela */
+    padding: 240px; /* Adiciona espaçamento interno */
+    box-sizing: border-box; /* Garante que o padding não afete a largura total */
+
 }
 
 #h1p4{ 
@@ -105,6 +97,31 @@
     margin: 0px;
     text-align: center;
 
+
+}
+a{
+    text-decoration: none;
+    color: white;
+   
+
+}
+.saibamais {
+    display: block; /* Garante que as divs se comportem como blocos */
+    margin: 20px auto; /* Centraliza horizontalmente */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    margin-bottom: 40px;
+    width: 100px;
+    background-color: blue;
+    border-radius: 30px;
+    cursor: pointer;
+   
+}
+.saibamais:hover{
+    background-color: rgb(43, 96, 240);
+    color: black;
 
 }
 
@@ -131,14 +148,33 @@
     }
 }
 
+body {
+    overflow-x: hidden; /* Evita o scroll horizontal */
+}
+
+div {
+    word-wrap: break-word; /* Faz com que o texto quebre para a próxima linha */
+}
+#part1, #part2, #part3, #part4 {
+
+    margin-top: 10px;
+    height: auto;
+    width: 100; /* Garante que a div não ultrapasse a largura da tela */
+    padding: 50px; /* Adiciona espaçamento interno */
+}
+
 /* Layout responsivo para telas menores */
 @media (max-width: 768px) {
+    .lula{
+        width: 100%;
+    }
+
     #part1 {
         flex-direction: column; /* Divs ficam empilhadas */
         align-items: center; /* Centraliza as divs */
     }
     #cotaçao, #foto {
-        width: 90%; /* Adapta a largura para telas menores */
+        width: 100%; /* Adapta a largura para telas menores */
         height: auto; /* Permite que a altura aumente para acomodar o conteúdo */
         opacity: 1; /* Garante que ambas as divs fiquem visíveis */
     }
@@ -149,9 +185,103 @@
         flex-direction: column; /* Divs ficam empilhadas */
         align-items: center; /* Centraliza as divs */
     }
-    #par3 {
+    #part3 {
         flex-direction: column; /* Divs ficam empilhadas */
         align-items: center; /* Centraliza as divs */
     }
+    #part4 {
+        flex-direction: column; /* Alinha os elementos em colunas */
+        justify-content: center; /* Centraliza os elementos */
+        align-items: center; /* Centraliza os elementos */
+        padding: 20px; /* Reduz o espaçamento interno */
+        width: 100%;
+    }
 
+    #part4 > div {
+        width: 90%; /* Ajusta a largura dos elementos filhos */
+        margin-bottom: 20px; /* Adiciona espaçamento entre os elementos */
+    }
+   
+
+    #part4 > div, #taxia {
+        width: 90%; /* Reduz a largura das divs internas */
+        margin-bottom: 0px; /* Espaçamento entre as divs */
+        margin-top: 50px
+    }
+    #transp{
+        width: 90%; /* Reduz a largura das divs internas */
+        margin-bottom: 0px; /* Espaçamento entre as divs */
+    }
+
+    /* Ajustando as divs de imagem */
+    #foto, #fotor, #fotoe {
+    height: 250px;
+    width: 250px;
+    margin: 0;
+    }
+    h1, h3, h5, p {
+        font-size: 1rem; /* Ajusta o tamanho do texto */
+    }
+    #amigo{
+        flex-wrap: wrap;
+        gap: 10px ;
+        justify-content: flex-start;
+        padding: 20px;
+    }
+    #part4 {
+        padding: 10px; /* Diminui o padding em telas pequenas */
+        width: 100%;
+    }
+#direitos{
+    font-size: 0.7em;
 }
+#footer{
+    font-size: 1em;
+}
+#part5{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px;
+}
+#formulario {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto; /* Centraliza o formulário */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+#formulario label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#formulario input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#formulario button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+#formulario button:hover {
+    background-color: #0056b3;
+}    
+
+  
+
+
