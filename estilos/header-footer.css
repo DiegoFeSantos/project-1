@@ -17,10 +17,18 @@
     padding: 30px 20px 30px 20px;
    
 }
+#cotaçao h1{
+    color: white;
+    font-weight: bolder;
+}
+.h1{
+   color:rgb(57, 118, 250) !important;
+   font-weight: bolder !important;
+}
 
 #logopng {
-    height: 90x;
-    width: 170px;
+    height: 70x;
+    width: 250px;
 
 }
 #submenu{
@@ -62,4 +70,25 @@
 .foot{
     width: 40%;
 }
+@media (max-width: 768px) {
+    .lula{
+        width: 100%;
+    }
+    #footer{
+        font-size: 1em;
+        display: flex;
+        flex-direction: column;
+    }
+    #amigo{
+        display: flex;
+        flex-direction: column;
+         gap: 10px ;
+         
+         padding: 20px;
+     }
+     #logopng{
+        height: 50px;
+        width: 100px;
+     }
 
+}
